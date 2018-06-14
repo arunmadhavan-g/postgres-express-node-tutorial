@@ -9,7 +9,7 @@
     "create-migration": "sequelize migration:create --name",
     "migrate": "sequelize db:migrate",
     "reset-db": "sequelize db:migrate:undo:all",
-    "serve": "npm run migrate && forever ./bin/www -w app.js -w server"
+    "serve": "forever ./bin/www -w app.js -w server"
   },
   "keywords": [],
   "author": "",
