@@ -5,7 +5,11 @@
   "main": "index.js",
   "scripts": {
     "start:dev": "./node_modules/.bin/nodemon ./bin/www -w app.js -w server",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "create-migration": "sequelize migration:create --name",
+    "migrate": "sequelize db:migrate",
+    "reset-db": "sequelize db:migrate:undo:all",
+    "serve": "npm run migrate && forever ./bin/www -w app.js -w server"
   },
   "keywords": [],
   "author": "",
@@ -13,6 +17,7 @@
   "dependencies": {
     "body-parser": "^1.15.2",
     "express": "^4.14.0",
+    "forever": "^0.15.3",
     "morgan": "^1.7.0",
     "pg": "^6.2.4",
     "pg-hstore": "^2.3.2",
