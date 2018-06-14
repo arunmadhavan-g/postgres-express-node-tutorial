@@ -6,9 +6,9 @@
   "scripts": {
     "start:dev": "./node_modules/.bin/nodemon ./bin/www -w app.js -w server",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "create-migration": "sequelize migration:create --name",
-    "migrate": "sequelize db:migrate",
-    "reset-db": "sequelize db:migrate:undo:all",
+    "create-migration": "./node_modules/.bin/sequelize migration:create --name",
+    "migrate": "./node_modules/.bin/sequelize db:migrate",
+    "reset-db": "./node_modules/.bin/sequelize db:migrate:undo:all",
     "serve": "npm run migrate && forever ./bin/www -w app.js -w server"
   },
   "keywords": [],
